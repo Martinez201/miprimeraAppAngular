@@ -9,10 +9,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class EmpleadoComponent implements OnInit{
 
-  nombre="Macario";
-  apellido="Pruebas";
-  edad = 20;
-  empresa="Google";
+  private nombre="Macario";
+  private apellido="Pruebas";
+  private edad = 20;
+  private empresa="Google";
 
   constructor(){
 
@@ -20,6 +20,20 @@ export class EmpleadoComponent implements OnInit{
 
   ngOnInit(): void {
 
+  }
+
+
+  getNombre(){
+    return this.nombre;
+  }
+  getApellido(){
+    return this.apellido;
+  }
+  getEdad(){
+    return this.edad;
+  }
+  getEmpresa(){
+    return this.empresa;
   }
 
 }
