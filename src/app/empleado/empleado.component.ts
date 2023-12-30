@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-empleado',
@@ -7,6 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./empleado.component.css'],
   //styles:["p{background-color:red;}"] esto es cuando queremos prescindir de usar un fichero css para los estilos,(Aqui lo añadimos directamente)
 })
-export class EmpleadoComponent {
+export class EmpleadoComponent implements OnInit{
+
+  nombre="Macario";
+  apellido="Pruebas";
+  edad = 20;
+  empresa="Google";
+
+  constructor(){
+
+  }
+
+  ngOnInit(): void {
+
+  }
 
 }
