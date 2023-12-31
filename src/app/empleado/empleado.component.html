@@ -1,4 +1,11 @@
 <p>Nombre Empleado: {{getNombre()}} </p>
 <p>Apellido Empleado: {{getApellido()}} </p>
 <p>Edad Empleado: {{getEdad() > 18 ? "Mayor de edad": "Menor de edad" }} </p>
-<p>Empresa Empleado: {{getEmpresa()}} </p>
+<p>Empresa Empleado: {{empresa.value}} </p>
+
+
+  <label for="empresa">Inserte empresa:</label>
+  <input type="text" #empresa>
+
+  <input type="button" value="Enviar" (click)="llamaEmpresa(empresa.value)">
+
