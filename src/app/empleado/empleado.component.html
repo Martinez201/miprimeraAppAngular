@@ -5,6 +5,12 @@
 
 
   <label for="empresa">Inserte empresa:</label>
-  <input type="text" #empresa (keyup)="0">
+  <input type="text" #empresa (keyup)="0" [disabled]="getHabilitacionCuadro()">
 
+  <br/>
+  <br/>
 
+  <label for="registro">Registrado:</label>
+  <input type="checkbox" id="registro" [checked]="getUsuarioReguistrado()">
+
+{{getRegistroUsuario2()}}

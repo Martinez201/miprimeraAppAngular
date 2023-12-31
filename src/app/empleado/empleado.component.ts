@@ -13,6 +13,8 @@ export class EmpleadoComponent implements OnInit{
   private apellido="Pruebas";
   private edad = 20;
   //private empresa="Google";
+  private habilitacionCuadro = false;
+  private usuarioRegistrado = false;
 
   constructor(){
 
@@ -30,6 +32,12 @@ export class EmpleadoComponent implements OnInit{
   getEdad(){
     return this.edad;
   }
+  getHabilitacionCuadro(){
+    return this.habilitacionCuadro;
+  }
+  getUsuarioReguistrado(){
+    return this.usuarioRegistrado;
+  }
  /* getEmpresa(){
     return this.empresa;
   }*/
@@ -37,6 +45,10 @@ export class EmpleadoComponent implements OnInit{
   public llamaEmpresa(value:string){
 
 
+  }
+
+  public getRegistroUsuario2(){
+    this.usuarioRegistrado = true;
   }
 
 }
