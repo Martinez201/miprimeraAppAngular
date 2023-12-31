@@ -12,10 +12,10 @@ export class EmpleadoComponent implements OnInit{
   private nombre="Macario";
   private apellido="Pruebas";
   private edad = 20;
-  //private empresa="Google";
+
   private habilitacionCuadro = false;
   private usuarioRegistrado = false;
-
+  private txtRegistro = "No hay nadie registrado";
   constructor(){
 
   }
@@ -23,24 +23,45 @@ export class EmpleadoComponent implements OnInit{
   ngOnInit(): void {
 
   }
-  getNombre(){
+
+  /// getters de los atributos
+  public getNombre(){
     return this.nombre;
   }
-  getApellido(){
+  public getApellido(){
     return this.apellido;
   }
-  getEdad(){
+  public getEdad(){
     return this.edad;
   }
-  getHabilitacionCuadro(){
+  public getHabilitacionCuadro(){
     return this.habilitacionCuadro;
   }
-  getUsuarioReguistrado(){
+  public getUsuarioReguistrado(){
     return this.usuarioRegistrado;
   }
- /* getEmpresa(){
-    return this.empresa;
+  public getTxtRegistro(){
+    return this.txtRegistro;
+  }
+ // setters
+
+
+
+
+//funciones de eventos
+ /* public setUsuarioRegistrado(){
+    alert("El usuario se acaba de registrar");
   }*/
+
+  public setUsuarioRegistrado(event:Event){
+
+    if((<HTMLInputElement> event.target).value == "si"){ //aqui se hace un casting del objeto que recibimos del evento
+      this.txtRegistro = "El usuario se acaba de registrar";
+    }
+    else{
+      this.txtRegistro = "no hay naide registrado";
+    }
+   }
 
   public llamaEmpresa(value:string){
 
@@ -50,5 +71,7 @@ export class EmpleadoComponent implements OnInit{
   public getRegistroUsuario2(){
     this.usuarioRegistrado = true;
   }
+
+
 
 }

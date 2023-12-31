@@ -9,8 +9,13 @@
 
   <br/>
   <br/>
-
+  {{getTxtRegistro()}}
+  <br/>
+  <br/>
   <label for="registro">Registrado:</label>
-  <input type="checkbox" id="registro" [checked]="getUsuarioReguistrado()">
+  <input type="radio" name="nRegistro" id="registro" [checked]="getUsuarioReguistrado()" (click)="setUsuarioRegistrado($event)" value="si">
+  <br/>
+  <br/>
+  <label for="Noregistro">No registrado:</label>
+  <input type="radio" name="nRegistro" id="Noregistro" (click)="setUsuarioRegistrado($event)" value="no">
 
-{{getRegistroUsuario2()}}
