@@ -5,7 +5,6 @@
 
 
   <label for="empresa">Inserte empresa:</label>
-  <input type="text" #empresa>
+  <input type="text" #empresa (keyup)="0">
 
-  <input type="button" value="Enviar" (click)="llamaEmpresa(empresa.value)">
 
